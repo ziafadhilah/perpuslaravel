@@ -1,0 +1,8 @@
+.handap {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #3490dc !important;
+    color: white;
+}
