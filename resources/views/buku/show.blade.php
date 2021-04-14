@@ -12,7 +12,8 @@
             <p class="card-text">Judul Buku : {{$buku->judul}}</p>
             <p class="card-text">Pengarang : {{$buku->pengarang}}</p>
             <p class="card-text">Penerbit : {{$buku->penerbit}}</p>
-            <p class="card-text">Kategori : {{$buku->deskripsi}}</p>
+            <p class="card-text">Kategori : {{$buku->id_kategori}}</p>
+            <p class="card-text">Deskripsi : {{$buku->deskripsi}}</p>
             <p class="card-text">Tahun Terbit : {{$buku->tahun_terbit}}</p>
         </div>
         <div class="card-body">

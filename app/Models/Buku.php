@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Buku extends Model
 {
-    protected $fillable = ['judul', 'pengarang', 'penerbit', 'jumlah_buku', 'tahun_terbit', 'deskripsi'];
+    protected $fillable = ['judul', 'id_kategori', 'pengarang', 'penerbit', 'jumlah_buku', 'tahun_terbit', 'deskripsi'];
+
+    public function kategori()
+    {
+    	return $this->belongsTo(Kategori::class);
+    }
 }

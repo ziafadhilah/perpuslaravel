@@ -3,6 +3,7 @@
 use App\Http\Controllers\BukusController;
 use App\Http\Controllers\AnggotasController;
 use App\Http\Controllers\TransaksisController;
+use App\Http\Controllers\KategorisController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,8 +21,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [BukusController::class, 'index']);
 Route::get('/buku', [BukusController::class, 'index']);
 Route::get('/buku/{buku}', [BukusController::class, 'show']);
-Route::get('/create/buku', [BukusController::class, 'create']);
-Route::post('/create/buku', [BukusController::class, 'store']);
+Route::get('create/buku', [BukusController::class, 'create']);
+Route::post('create/buku', [BukusController::class, 'store']);
 Route::delete('/buku/{buku}', [BukusController::class, 'destroy']);
 Route::get('/buku/{buku}/edit', [BukusController::class, 'edit']);
 Route::patch('/buku/{buku}', [BukusController::class, 'update']);
@@ -34,6 +35,15 @@ Route::post('/create/anggota', [AnggotasController::class, 'store']);
 Route::delete('/anggota/{anggota}', [AnggotasController::class, 'destroy']);
 Route::get('/anggota/{anggota}/edit', [AnggotasController::class, 'edit']);
 Route::patch('/anggota/{anggota}', [AnggotasController::class, 'update']);
+
+//RouteKategoris
+Route::get('/kategori', [KategorisController::class, 'index']);
+Route::get('/kategori/{kategori}', [KategorisController::class, 'show']);
+Route::get('/create/kategori', [KategorisController::class, 'create']);
+Route::post('/create/kategori', [KategorisController::class, 'store']);
+Route::delete('/kategori/{kategori}', [KategorisController::class, 'destroy']);
+Route::get('/kategori/{kategori}/edit', [KategorisController::class, 'edit']);
+Route::patch('/kategori/{kategori}', [KategorisController::class, 'update']);
 
 //RouteTransaksis
 Route::get('/transaksi', [TransaksisController::class, 'index']);

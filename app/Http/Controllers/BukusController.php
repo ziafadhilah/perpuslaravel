@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Buku;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
 
 class BukusController extends Controller
@@ -25,7 +26,8 @@ class BukusController extends Controller
      */
     public function create()
     {
-        return view('/buku/create');
+        $kategoris = Kategori::get();
+        return view('/buku/create', compact('kategoris'));
     }
 
     /**
@@ -38,6 +40,7 @@ class BukusController extends Controller
     {
         $request->validate([
             'judul' => 'required',
+            'id_kategori' => 'required',
             'pengarang' => 'required',
             'penerbit' => 'required',
             'jumlah_buku' => 'required|integer',

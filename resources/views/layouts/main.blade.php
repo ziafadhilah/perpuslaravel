@@ -20,20 +20,23 @@
                 <div class="navbar-nav ms-auto">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{url('/buku')}}">Daftar Buku</a>
+                            <a class="nav-link" aria-current="page" href="{{url('/buku')}}">Buku</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{url('/anggota')}}">Anggota</a>
+                            <a class="nav-link" aria-current="page" href="{{url('/kategori')}}">Kategori</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{url('/transaksi')}}">Peminjaman</a>
+                            <a class="nav-link" aria-current="page" href="{{url('/anggota')}}">Anggota</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{{url('/transaksi')}}">Peminjaman</a>
                         </li>
                     </ul>
-                    <form class="d-flex" action="" method="get" role="search">
+                    <!-- <form class="d-flex" action="" method="get" role="search">
                     @csrf
                         <input name="search" class="form-control me-2" type="search" placeholder="Cari Buku">
                         <button class="btn btn-outline-light" type="submit">Cari</button>
-                    </form>
+                    </form> -->
                 </div>
             </div>
         </div>

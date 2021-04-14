@@ -20,6 +20,14 @@
                     @enderror
                 </div>
                 <div class="input-group mb-3">
+                    <select name="id_kategori" class="form-select" aria-label="Default select example">
+                        <option selected>-- Pilih Kategori --</option>
+                        @foreach($kategoris as $kategori)
+                        <option value="{{$kategori->id}}">{{$kategori->nama}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-default">Pengarang</span>
                     <input type="text" class="form-control @error('pengarang') is-invalid @enderror" name="pengarang" id="pengarang" placeholder="Pengarang" value="{{old('pengarang')}}">
                     @error('pengarang')
